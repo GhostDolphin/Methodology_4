@@ -102,9 +102,14 @@ function addTask() {
   rl.question('Enter task title: ', (title) => {
     rl.question('Enter task description: ', (description) => {
       rl.question('Enter task deadline (yyyy-mm-dd): ', (deadline) => {
-        const task = new Task(title, description, new Date(deadline));
-        taskManager.addTask(task);
-        console.log('Task added.');
+        if (deadline.indexOf('-') !== -1) {
+          const checkDl = deadline.split('-');
+          if (checkDl[0].length === 4 && checkDl[1].length === 2 && checkDl[2].length === 2) {
+            const task = new Task(title, description, new Date(deadline));
+            taskManager.addTask(task);
+            console.log('Task added.');
+          } else console.log('Incorrect value for deadline');
+        } else console.log('Incorrect value for deadline');
         showMenu();
       });
     });
@@ -118,8 +123,13 @@ function editTask() {
       rl.question('Enter new task title: ', (title) => {
         rl.question('Enter new task description: ', (description) => {
           rl.question('Enter new task deadline (yyyy-mm-dd): ', (deadline) => {
-            taskManager.editTask(index, title, description, new Date(deadline));
-            console.log('Task edited.');
+            if (deadline.indexOf('-') !== -1) {
+              const checkDl = deadline.split('-');
+              if (checkDl[0].length === 4 && checkDl[1].length === 2 && checkDl[2].length === 2) {
+                taskManager.editTask(index, title, description, new Date(deadline));
+                console.log('Task edited.');
+              } else console.log('Incorrect value for deadline');
+            } else console.log('Incorrect value for deadline');
             showMenu();
           });
         });
@@ -159,16 +169,22 @@ function showAllTasks() {
 
 function completeTask() {
   rl.question('Enter the index of the task to mark as completed: ', (index) => {
-    taskManager.completeTask(index);
-    console.log('Task marked as completed.');
+    const task = taskManager.getAllTasks()[index];
+    if (task) {
+      taskManager.completeTask(index);
+      console.log('Task marked as completed.');
+    } else console.log('Task with the specified index not found.');
     showMenu();
   });
 }
 
 function deleteTask() {
   rl.question('Enter the index of the task to delete: ', (index) => {
-    taskManager.deleteTask(index);
-    console.log('Task deleted.');
+    const task = taskManager.getAllTasks()[index];
+    if (task) {
+      taskManager.deleteTask(index);
+      console.log('Task deleted.');
+    } else console.log('Task with the specified index not found.');
     showMenu();
   });
 }
