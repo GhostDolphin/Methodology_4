@@ -32,10 +32,10 @@ Upon starting the application you will be asked to choose whatever action you ne
 
 >Code Reviews
 
-[Code Review #1]()
+[Code Review #1](https://github.com/GhostDolphin/Methodology_4/pull/1)
 
-[Code Review #2]()
+[Code Review #2](https://github.com/GhostDolphin/Methodology_4/pull/2)
 
-[Code Review #3]()
+[Code Review #3](https://github.com/GhostDolphin/Methodology_4/pull/3)
 
-[Code Review #4]()
+[Code Review #4](https://github.com/GhostDolphin/Methodology_4/pull/4)
