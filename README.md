@@ -4,6 +4,8 @@
 
 This is a console application which allows user to plan, edit and complete their tasks.
 
+[Design Document](https://docs.google.com/document/d/1zoOg_8NZOJEB-dpax6eJ2qhZTX6XPAjnMiCJvGhUwKQ/edit?usp=sharing)
+
 >Insctructions
 
 Follow these steps to compile and launch the project:
