@@ -26,6 +26,10 @@ $ npm install readline
 $ npm test
 ```
 
+>How to use app
+
+Upon starting the application you will be asked to choose whatever action you need to complete. Everything else works pretty alike, you just input index or other prompt and receive a corresponding answer.
+
 >Code Reviews
 
 [Code Review #1]()
