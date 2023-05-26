@@ -57,16 +57,13 @@ class TaskManager {
 
   completeTask(index) {
     const task = this.tasks[index];
-    if (task) {
-      task.complete();
-    }
+    if (task) task.complete();
   }
 
   editTask(index, title, description, deadline) {
     const task = this.tasks[index];
-    if (task) {
+    if (task)
       task.edit(title, description, deadline);
-    }
   }
 
   deleteTask(index) {
@@ -161,7 +158,10 @@ function showAllTasks() {
     const status = task.completed ? 'Completed' : 'Not completed';
     const completedDate = task.completedDate ? task.completedDate.toISOString() : 'Not completed';
 
-    console.log(`${index}. ${task.title} - Deadline: ${task.deadline} - Status: ${status} - Completed Date: ${completedDate}`);
+    console.log(`${index}. ${task.title} - `
+      + `Deadline: ${task.deadline} - Status: ${status} - `
+      + `Completed Date: ${completedDate}`
+    );
   });
 
   showMenu();
