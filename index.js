@@ -185,15 +185,17 @@ function showOverdueTasks() {
 }
 
 function showMenu() {
-  console.log('\nMenu:');
-  console.log('1. Show list of undone tasks');
-  console.log('2. Show list of all tasks');
-  console.log('3. Mark task as completed');
-  console.log('4. Add new task');
-  console.log('5. Edit task');
-  console.log('6. Show list of overdue tasks');
-  console.log('7. Delete task');
-  console.log('8. Exit');
+  console.log(
+    '\nMenu:'
+    + '\n1. Show list of undone tasks'
+    + '\n2. Show list of all tasks'
+    + '\n3. Mark task as completed'
+    + '\n4. Add new task'
+    + '\n5. Edit task'
+    + '\n6. Show list of overdue tasks'
+    + '\n7. Delete task'
+    + '\n8. Exit'
+  );
 
   rl.question('Select an option: ', (option) => {
     switch (option) {
